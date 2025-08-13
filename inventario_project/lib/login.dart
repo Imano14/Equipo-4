@@ -1,3 +1,7 @@
+import 'package:flutter/material.dart';
+import 'package:inventario_project/main.dart';
+import 'package:inventario_project/registro_product.dart';
+
 class TextfieldGeneral extends StatelessWidget {
   final String labelText;
   final String hintText;
@@ -176,24 +180,24 @@ class _SingupState extends State<Singup> {
     );
   }
 
- // ...existing code...
-Widget _buttonSingUp() {
-  return Center(
-    child: ElevatedButton(
-      onPressed: () {
-        Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(builder: (context) => TablaInfoPage ()),
-        );
-      },
-      child: Text("Iniciar Sesion"),
-      style: ElevatedButton.styleFrom(
-        backgroundColor: Colors.yellow,
-        foregroundColor: Colors.black,
-        textStyle: TextStyle(fontSize: 20),
-        padding: EdgeInsets.symmetric(horizontal: 40, vertical: 15),
+  // ...existing code...
+  Widget _buttonSingUp() {
+    return Center(
+      child: ElevatedButton(
+        onPressed: () {
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(builder: (context) => MyApp()),
+          );
+        },
+        child: Text("Iniciar Sesion"),
+        style: ElevatedButton.styleFrom(
+          backgroundColor: Colors.yellow,
+          foregroundColor: Colors.black,
+          textStyle: TextStyle(fontSize: 20),
+          padding: EdgeInsets.symmetric(horizontal: 40, vertical: 15),
+        ),
       ),
-    ),
-  );
-}
+    );
+  }
 }

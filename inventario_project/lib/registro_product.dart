@@ -19,10 +19,10 @@ class inventarioProducto {
 
 class _TablaProducto extends StatefulWidget {
   @override
-  State<_TablaProducto> createState() => TablaProductoPage();
+  State<_TablaProducto> createState() => TablaProductPage();
 }
 
-class TablaProductoPage extends State<_TablaProducto> {
+class TablaProductPage extends State<_TablaProducto> {
   List<inventarioProducto> productos = [
     inventarioProducto(
       id: 1,

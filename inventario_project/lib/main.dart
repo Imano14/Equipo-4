@@ -1,10 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:inventario_project/login.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
-class TextfieldGeneral extends StatelessWidget {
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Inventario Project',
+      home: LoginPage(),
+      debugShowCheckedModeBanner: false,
+    );
+  }
+}
+
+class IventarioProduct extends StatelessWidget {
   final String labelText;
   final String hintText;
   final Function(String) onChanged;
@@ -13,7 +27,7 @@ class TextfieldGeneral extends StatelessWidget {
   final bool obscureText;
   final String? Function(String?)? validator;
 
-  const TextfieldGeneral({
+  const IventarioProduct({
     required this.labelText,
     required this.hintText,
     required this.onChanged,
@@ -67,7 +81,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFB71C1C),
+      backgroundColor: Color.fromARGB(255, 0, 255, 21),
       appBar: AppBar(
         title: Text('Login'),
         backgroundColor: Colors.transparent,
@@ -84,7 +98,7 @@ class _LoginPageState extends State<LoginPage> {
                   "Inventario \n JVK".toUpperCase(),
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    color: Color(0xFFFFD700),
+                    color: Color.fromARGB(255, 0, 0, 0),
                     fontSize: 50,
                     fontWeight: FontWeight.w900,
                     fontFamily: "MontaguSlab_24pt-Bold",
@@ -166,13 +180,13 @@ class _LoginPageState extends State<LoginPage> {
       onPressed: () {
         Navigator.pushReplacement(
           context,
-          MaterialPageRoute(builder: (context) => Singup()),
+          MaterialPageRoute(builder: (context) => MyApp()),
         );
       },
       child: Text("REGISTRARSE"),
       style: ElevatedButton.styleFrom(
-        backgroundColor: Color(0xFFFFD700), // Dorado
-        foregroundColor: Color(0xFFB71C1C),
+        backgroundColor: Color.fromARGB(255, 0, 47, 255), // Dorado
+        foregroundColor: Color.fromARGB(255, 0, 0, 0),
         textStyle: TextStyle(fontSize: 20),
         padding: EdgeInsets.symmetric(horizontal: 40, vertical: 15),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
